@@ -1,6 +1,6 @@
 {
   "name": "variant-call-format-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library for processing/extracting information in Variant Call Format (VCF) Files",
   "homepage": "https://github.com/DavidStreid/variant-call-format-parser",
   "main": "index.js",
