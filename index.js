@@ -147,6 +147,8 @@ exports.extractVariantInfo = function(vcfFile) {
     const columns = getColumns(cleaned);
     const mutationInfo = [];
 
+    const resp = {};
+
     const vcfTypes = new Set();
 
     // Parse through lines of data and create object of data
@@ -165,9 +167,9 @@ exports.extractVariantInfo = function(vcfFile) {
         mutationInfo.push(variantInfo);
     }
     // TODO - constants
-    mutationInfo['types'] = [...vcfTypes];  // Return list of all unique types
-
-    return mutationInfo;
+    resp['types'] = [...vcfTypes];  // Return list of all unique types
+    resp['variantInfo'] = mutationInfo;
+    return resp;
 };
 
 /**

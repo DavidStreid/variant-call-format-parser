@@ -3,7 +3,7 @@ const { isInvalidVCF, extractDate, extractVariantInfo } = require("../index");
 const { VCF } = require('./mocks/mock-vcf');
 
 
-describe('vcf-parser', () => {
+describe('variant-call-format-parser', () => {
   it('null vcf files are invalid', () => {
     expect(isInvalidVCF(null)).to.be.true;
     expect(isInvalidVCF('')).to.be.false;
@@ -24,8 +24,14 @@ describe('vcf-parser', () => {
    *     20     1234567 microsat1 GTCT   G,GTACT 50   PASS   NS=3;DP=9;AA=G                    GT:GQ:DP     0/1:35:4 ...
    *
    */
-  it('Extracts the correct mutation information', () => {
-    const variantInfo = extractVariantInfo(VCF);
+  it('Extracts the correct mutation & type information', () => {
+    const resp = extractVariantInfo(VCF);
+    const variantInfo = resp['variantInfo'];
+    const types = resp['types'];
+
+    // Check that a type was extracted and that it was '20'
+    expect(types.length).to.equal(1);
+    expect(types[0]).to.equal('20');
 
     // Check that 5 objects were extracted
     expect(variantInfo.length).to.equal(5);
