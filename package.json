@@ -1,14 +1,19 @@
 {
-  "name": "@david_streid/vcf-parser",
-  "version": "1.0.1",
-  "description": "Library for processing/extracting information in VCF files",
+  "name": "variant-call-format-parser",
+  "version": "1.0.0",
+  "description": "Library for processing/extracting information in Variant Call Format (VCF) Files",
+  "homepage": "https://github.com/DavidStreid/variant-call-format-parser",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
-  "keywords": [],
+  "keywords": [
+    "vcf",
+    "genetics"
+  ],
   "author": "David Streid",
   "license": "ISC",
+  "bugs": "https://github.com/DavidStreid/variant-call-format-parser/issues",
   "dependencies": {
     "moment": "^2.24.0"
   },
