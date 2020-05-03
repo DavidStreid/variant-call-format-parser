@@ -120,15 +120,7 @@ exports.extractDate = function(vcfFile) {
             const equalsSplit = line.split(EQUALS);
             const dateString = equalsSplit[1];
 
-            let date = new Date(dateString);
-            if (isNaN(date.getTime())) {  // invalid date
-                const mDate = moment(dateString, 'YYYYMMDD').format();
-                date = new Date(mDate);
-            }
-
-            if ( date instanceof Date ) {
-                return date;
-            }
+            return new Date(dateString);
         }
     }
 

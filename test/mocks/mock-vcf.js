@@ -3,7 +3,8 @@
 // This file is taken directly from http://www.internationalgenome.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-40/
 exports.VCF =
 `##fileformat=VCFv4.0
-##fileDate=20090805
+##fileDate=20110213
+##fileUTCtime=2011-02-13T10:38:12
 ##source=myImputationProgramV3.1
 ##reference=1000GenomesPilot-NCBI36
 ##phasing=partial

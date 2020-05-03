@@ -10,7 +10,7 @@ describe('variant-call-format-parser', () => {
   });
 
   it('Extracts the right date', () => {
-    expect(extractDate(VCF).toDateString()).to.equal('Wed Aug 05 2009');
+    expect(extractDate(VCF).toDateString()).to.equal('Sun Feb 13 2011');
   });
 
   /**

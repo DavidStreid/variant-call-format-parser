@@ -1,6 +1,6 @@
 {
   "name": "variant-call-format-parser",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Library for processing/extracting information in Variant Call Format (VCF) Files",
   "homepage": "https://github.com/DavidStreid/variant-call-format-parser",
   "main": "index.js",
@@ -16,7 +16,7 @@
   "license": "ISC",
   "bugs": "https://github.com/DavidStreid/variant-call-format-parser/issues",
   "dependencies": {
-    "moment": "^2.24.0"
+    "moment": "^2.25.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
